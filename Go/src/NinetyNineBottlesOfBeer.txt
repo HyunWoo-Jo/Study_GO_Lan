@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func main() {
+	for i := 99; i > 0; i-- {
+		switch {
+		case i != 1:
+			fmt.Printf("%d bottles of beer, %d bottles of beer.\n", i, i)
+			fmt.Printf("Take one down, pass it around, %d bottles of beer on the wall.\n", i-1)
+		case i == 1:
+			fmt.Printf("%d bottle of beer, %d bottle of beer.\n", i, i)
+			fmt.Printf("Take one down, pass it around, No more bottles of beer on the wall.\n")
+			fmt.Printf("No more bottles of beer on the wall, No more ottles of beer.\n")
+			fmt.Printf("Go to the store and buy some more, 99 bottles of beer on the wall\n")
+		}
+	}
+
+}

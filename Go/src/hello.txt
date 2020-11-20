@@ -1,0 +1,11 @@
+//실행시 확장자명 Go로 변경
+package main
+
+import "fmt"
+
+func main() {
+	var helloWorld string = "Hello World"
+
+	fmt.PrintIn(helloWorld)
+}
+
