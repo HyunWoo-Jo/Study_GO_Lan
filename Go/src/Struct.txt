@@ -1,0 +1,40 @@
+package main
+
+import "fmt"
+
+type Rectangle struct {
+	width, height int
+}
+
+func (_ *Rectangle) CreateRectangle(width int, height int) *Rectangle {
+	return &Rectangle{width, height}
+}
+func (_ *Rectangle) Hello() {
+	fmt.Printf("Rectangle\n")
+}
+
+type Figure struct {
+	Rectangle
+}
+
+func (_ *Figure) Hello() {
+	fmt.Printf("Figure\n")
+}
+
+func main() {
+	var rect Rectangle
+	var figure Figure
+
+	rect.height = 10
+
+	var rectPtr *Rectangle
+	rectPtr = new(Rectangle)
+	rectPtr = figure.Rectangle.CreateRectangle(20, 30)
+	rectPtr.width = 10
+
+	rect1 := Rectangle{10, 20}
+	rect1.height = 25
+	figure.Hello()
+	figure.Rectangle.Hello()
+
+}
