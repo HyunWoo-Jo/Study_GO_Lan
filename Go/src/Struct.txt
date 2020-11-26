@@ -21,7 +21,7 @@ func (_ *Figure) Hello() {
 	fmt.Printf("Figure\n")
 }
 
-func main() {
+func mainczx() {
 	var rect Rectangle
 	var figure Figure
 

@@ -1,18 +1,18 @@
 package main
 
-import (
-	"fmt"
-	"math"
-	"runtime"
-)
+// import (
+// 	"fmt"
+// 	"math"
+// 	"runtime"
+// )
 
-func main() {
-	var a float64 = 10.0
-	for i := 0; i < 10; i++ {
-		a -= 0.1
-	}
-	const epsilon = 1e-14
+// func mainCs() {
+// 	var a float64 = 10.0
+// 	for i := 0; i < 10; i++ {
+// 		a -= 0.1
+// 	}
+// 	const epsilon = 1e-14
 
-	fmt.Println(math.Abs(a-9.0) <= epsilon)
-	fmt.Println(runtime.NumCPU())
-}
+// 	fmt.Println(math.Abs(a-9.0) <= epsilon)
+// 	fmt.Println(runtime.NumCPU())
+// }

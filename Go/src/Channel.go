@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+)
+
+func sum(a int, b int, c chan int) {
+	c <- a + b // <- 채널의 값을 보냄
+}
+
+func main() {
+	c := make(chan int)
+
+	go sum(1, 2, c)
+	n := <-c //채널에서 값을 꺼낸 뒤에 대입 순서를 보장해줌
+	fmt.Println(n)
+
+}

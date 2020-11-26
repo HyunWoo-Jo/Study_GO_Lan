@@ -1,11 +1,9 @@
-//실행시 확장자명 Go로 변경
 package main
 
-import "fmt"
+// import "fmt"
 
-func main() {
-	var helloWorld string = "Hello World"
+// func mainc() {
+// 	var helloWorld string = "Hello World"
 
-	fmt.PrintIn(helloWorld)
-}
-
+// 	fmt.PrintIn(helloWorld)
+// }

@@ -1,42 +1,42 @@
 package main
 
-import "fmt"
+// import "fmt"
 
-func main() {
-	hello()
-	fmt.Println(sumandDiff(1, 2))
-	_, d := sumandDiff(3, 1) //_ 생략
-	fmt.Println(d)
-	c := sum(1, 2, 3, 4, 5, 6)
-	fmt.Println(c)
+// func main() {
+// 	hello()
+// 	fmt.Println(sumandDiff(1, 2))
+// 	_, d := sumandDiff(3, 1) //_ 생략
+// 	fmt.Println(d)
+// 	c := sum(1, 2, 3, 4, 5, 6)
+// 	fmt.Println(c)
 
-	sumNumber := sum //함수를 변수에 담아서 사용가능
-	fmt.Println(sumNumber(2, 3, 4, 5))
+// 	sumNumber := sum //함수를 변수에 담아서 사용가능
+// 	fmt.Println(sumNumber(2, 3, 4, 5))
 
-	defer delay() // 지연호출 main 끝날때 쯤 호출 파일을 닫을 때 유용하게 사용
-	func(a int) {
-		fmt.Printf("익명 함수 %d\n", a)
-	}(3)
+// 	defer delay() // 지연호출 main 끝날때 쯤 호출 파일을 닫을 때 유용하게 사용
+// 	func(a int) {
+// 		fmt.Printf("익명 함수 %d\n", a)
+// 	}(3)
 
-}
-func delay() {
-	fmt.Printf("지연호출 \n")
-}
+// }
+// func delay() {
+// 	fmt.Printf("지연호출 \n")
+// }
 
-func hello() {
-	fmt.Printf("Hello\n")
+// func hello() {
+// 	fmt.Printf("Hello\n")
 
-}
+// }
 
-func sumandDiff(a int, b int) (int, int) {
-	return a + b, a - b
-}
+// func sumandDiff(a int, b int) (int, int) {
+// 	return a + b, a - b
+// }
 
-func sum(n ...int) int { //가변인자 ... 을 자료형 앞에 붙임 인풋 값은 슬라이스로 꺼내쓰면 된다.
-	result := 0
-	for value := range n {
-		result += value
-	}
-	return result
+// func sum(n ...int) int { //가변인자 ... 을 자료형 앞에 붙임 인풋 값은 슬라이스로 꺼내쓰면 된다.
+// 	result := 0
+// 	for value := range n {
+// 		result += value
+// 	}
+// 	return result
 
-}
+// }
