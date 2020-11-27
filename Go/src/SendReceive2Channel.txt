@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+)
+
+func numChan(a, b int) <-chan int {
+	out := make(chan int)
+	go func() {
+		out <- a
+		out <- b
+		close(out)
+	}()
+	return out
+}
+func ChanSum(ch <-chan int) <-chan int {
+	out := make(chan int)
+	go func() {
+		r := 0
+		for count := range ch {
+			r += count
+		}
+		out <- r
+	}()
+	return out
+}
+
+func main() {
+	c := numChan(1, 2)
+	out := ChanSum(c)
+
+	fmt.Println(<-out)
+}

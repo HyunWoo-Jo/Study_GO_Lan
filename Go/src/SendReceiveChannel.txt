@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func SendChan(c chan<- int) { //보내기 전용 채널
+	for i := 0; i < 5; i++ {
+		c <- i
+	}
+
+	//fmt.Println(<- c) 값을 꺼낼려고 하면 에러
+}
+
+func ReceiveChan(c <-chan int) {
+	for i := range c {
+		fmt.Println(i)
+	}
+	fmt.Println(<-c)
+	//c<-1 채널에 값을 보내면 에러
+}
+
+func main() {
+	c := make(chan int)
+
+	go SendChan(c)
+	go ReceiveChan(c)
+	fmt.Scanln()
+
+}

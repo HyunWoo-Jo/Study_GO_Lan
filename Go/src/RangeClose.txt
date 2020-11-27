@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main() {
+	c := make(chan int)
+
+	go func() {
+		for i := 0; i < 5; i++ {
+			c <- i
+		}
+		close(c) // 채널을 닫음
+	}()
+
+	for i := range c { // range를 사용하여 채널에서 값을 꺼냄
+		fmt.Println(i)
+	}
+}

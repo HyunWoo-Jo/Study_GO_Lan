@@ -1,22 +1,22 @@
 package main
 
-// import (
-// 	"fmt"
-// 	"runtime"
-// )
+import (
+	"fmt"
+	"runtime"
+)
 
-// func mainsad() {
-// 	runtime.GOMAXPROCS(runtime.NumCPU()) // 사용가능한 코어 개수를 받아옴
+func mainsad() {
+	runtime.GOMAXPROCS(runtime.NumCPU()) // 사용가능한 코어 개수를 받아옴
 
-// 	fmt.Println(runtime.GOMAXPROCS(0)) // 0 은 현재 설정을 보여줌
+	fmt.Println(runtime.GOMAXPROCS(0)) // 0 은 현재 설정을 보여줌
 
-// 	s := "Hello, World!"
+	s := "Hello, World!"
 
-// 	for i := 0; i < 100; i++ {
-// 		go func(n int) {
-// 			fmt.Println(s, n)
-// 		}(i)
-// 	}
-// 	fmt.Scanln()
+	for i := 0; i < 100; i++ {
+		go func(n int) {
+			fmt.Println(s, n)
+		}(i)
+	}
+	fmt.Scanln()
 
-// }
+}

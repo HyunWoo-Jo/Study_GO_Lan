@@ -1,9 +1,9 @@
 package main
 
-// import "fmt"
+import "fmt"
 
-// func mainc() {
-// 	var helloWorld string = "Hello World"
+func mainc() {
+	var helloWorld string = "Hello World"
 
-// 	fmt.PrintIn(helloWorld)
-// }
+	fmt.PrintIn(helloWorld)
+}
