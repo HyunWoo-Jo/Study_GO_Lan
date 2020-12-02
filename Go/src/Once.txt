@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+	"runtime"
+	"sync"
+)
+
+func hello() {
+	fmt.Println("Hello, World")
+}
+
+func main() {
+	runtime.GOMAXPROCS(runtime.NumCPU())
+
+	once := new(sync.Once)
+	for i := 0; i < 3; i++ {
+		go func() {
+			println("Hi ")
+			once.Do(hello)
+		}()
+	}
+	fmt.Scanln()
+}
