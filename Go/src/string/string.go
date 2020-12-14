@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-func main1() {
+func mainString() {
 	var s1 string
 	s1 = strconv.FormatBool(true)
 	fmt.Println(s1)
