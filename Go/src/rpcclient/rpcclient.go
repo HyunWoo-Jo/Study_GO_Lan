@@ -23,7 +23,7 @@ func main() {
 
 	args := &Args{1, 2}
 	reply := new(Reply)
-	err = client.Call("Call.Sum", args, reply)
+	err = client.Call("Calc.Sum", args, reply)
 	if err != nil {
 		fmt.Println(err)
 		return
